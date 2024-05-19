@@ -1,0 +1,55 @@
+/* Oscars Section */
+.oscars {
+  position: relative;
+  display: flex;
+  margin: 0px auto 450px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.logoscars {
+  position: absolute;
+  width: 279px;
+  height: 129px;
+  top: 130px;
+  left: 950px;
+}
+
+.blocImgText {
+  position: absolute;
+  background-image: url("../assets/images/orangeOscars.png");
+  background-repeat: no-repeat;
+  top: 100px;
+  left: 150px;
+  max-width: 100%;
+  height: 350px;
+}
+
+.txt-oscars {
+  text-align: left;
+  font-size: 40px;
+  line-height: 1.4;
+  /* Add flowers Oscars Section */
+}
+.txt-oscars::before {
+  content: url("../assets/images/Sunflower.png");
+  position: absolute;
+  left: -40px;
+  bottom: 80%;
+  max-width: 100%;
+  height: auto;
+}
+.txt-oscars::after {
+  content: url("../assets/images/orchid.png");
+  position: absolute;
+  left: 1205px;
+  bottom: 320px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Delete Flowers Footer before & after */
+.site-footer::before, .site-footer::after {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
