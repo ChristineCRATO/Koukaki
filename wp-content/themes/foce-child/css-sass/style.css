@@ -20,16 +20,17 @@
   position: absolute;
   background-image: url("../assets/images/orangeOscars.png");
   background-repeat: no-repeat;
+  padding-top: 29px;
   top: 100px;
   left: 150px;
   max-width: 100%;
-  height: 350px;
+  height: 370px;
 }
 
 .txt-oscars {
   text-align: left;
   font-size: 40px;
-  line-height: 1.4;
+  line-height: 1.2;
   /* Add flowers Oscars Section */
 }
 .txt-oscars::before {
@@ -52,4 +53,34 @@
 /* Delete Flowers Footer before & after */
 .site-footer::before, .site-footer::after {
   display: none;
+}
+
+/* Defined Fade-In Animation SectionS */
+/*... FadeInUp */
+#characters, .story, #place, #studio, #oscars {
+  opacity: 0;
+  animation: FadeInUp 12s forwards;
+}
+
+@keyframes FadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(600px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*... FadeInDown */
+@keyframes FadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-300px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=style.css.map */
