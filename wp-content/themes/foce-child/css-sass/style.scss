@@ -1,4 +1,5 @@
-/* Oscars Section */
+/* OSCARS */
+/*...Oscars Section */
 .oscars {
   position: relative;
   display: flex;
@@ -29,7 +30,7 @@
   font-size: 40px;
   line-height: 1.2;
   
-  /* Add flowers Oscars Section */
+  /*...Add flowers Oscars Section */
   &::before {
     content: url("../assets/images/Sunflower.png");
     position: absolute;
@@ -47,30 +48,31 @@
     height: auto;
   }
 }
-/* Delete Flowers Footer before & after */
+/*...Delete Flowers Footer before & after */
 .site-footer {
   &::before,
   &::after {
   display: none;
 }}
 
-/* Defined Fade-In Animation SectionS */
-/*... FadeInUp */
+/* FADE-IN */
+/*...Defined Fade-In Animation SectionS */
+/*...FadeInUp */
 #characters, .story, #place, #studio, #oscars {
   opacity: 0;
-  animation: FadeInUp 12s forwards;
+  animation: FadeInUp 5s forwards;
 }
 @keyframes FadeInUp {
   from {
     opacity: 0;
-    transform: translateY(600px);
+    transform: translateY(400px);
   } 
   to {
     opacity: 1;
     transform: translateY(0);  
   }
 }
-/*... FadeInDown */
+/*...FadeInDown */
 @keyframes FadeInDown {
   from {
     opacity: 0;
@@ -81,4 +83,39 @@
     visibility: visible;
     transform: translateY(0);
   }
+}
+
+/* FLOWERS */
+/*...Rotate Flowers */
+@keyframes RotateFlowers {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*...Flowers Section */
+.story__article::after,
+.story h2::after,
+#studio h2::before,
+#studio h2::after,
+.txt-oscars::before,
+.txt-oscars::after,
+ul::after {
+  animation: RotateFlowers 3s linear infinite;
+}
+@keyframes ScrollFeuille {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+div::before {
+  animation: ScrollFeuille 3s linear infinite;
 }
