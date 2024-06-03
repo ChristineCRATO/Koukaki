@@ -124,76 +124,60 @@ div::before {
 }
 
 /* FADE Title */
-/*... BackG */
+/*... BackG 
 @keyframes FadeBackGTitle {
   from {
-    background-position: 0 300px;
-    opacity: 0;
+      background-position : 0 300px;
+      opacity: 0;
   }
   to {
-    background-position: 0 0;
-    opacity: 1;
+      background-position: 0 0;
+      opacity: 1;
   }
 }
-/*... Animate Title 1, 2, 3 et 4 */
+/*... Animate Title 1, 2, 3 et 4 
 @keyframes AnimTitle {
   0% {
-    transform: translateY(100px);
+    transform : translateY(100px)
   }
-  100% {
+  100%{
     transform: translateY(0);
     opacity: 1;
   }
 }
-/*... Title Section */
+/*... Title Section 
 span.TitleFade {
   display: inline-block;
   opacity: 0;
   transform: translateY(100px);
   transition: transform 1s, opacity 0.5s;
 }
-
 .observ {
   opacity: 1;
   transform: translateY(0);
   transition-duration: 3s, opacity 2s;
 }
-
 .observ:nth-child(1) {
   animation: FadeInUp 0.7s ease-in-out forwards;
 }
-
 .observ:nth-child(2) {
   animation: FadeInUp 0.7s ease-in-out forwards;
   animation-delay: 0.3s;
-}
-
+}*/
 /* Swiper */
 /*... General Swiper Style */
-.swiper {
-  width: 95%;
-  padding-bottom: 20px;
-  display: block;
-}
-.swiper .swiper-slide img {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-  text-align: center;
+.mySwiper {
+  width: 1200px;
+  display: flex;
+  justify-content: left;
 }
 
-/*... Style Section Characters */
-.characters-swiper {
-  flex-direction: column;
-  width: 100%;
+.swiper-slide img {
+  opacity: 0;
+  transition-duration: 800ms;
+  transform: translate3d(10px, 0px, -15px) rotateX(0deg) rotateY(0deg) scale(1);
 }
 
-h3 {
-  align-self: flex-start;
-  z-index: 2;
-}
-
-div {
-  flex: none !important;
+.swiper-slide-visible img {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

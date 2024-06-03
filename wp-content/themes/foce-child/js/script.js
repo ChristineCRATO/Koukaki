@@ -21,22 +21,21 @@ AnimTitle.forEach((section) => {
 
 // SWIPER
 var swiper = new Swiper(".swiper", {
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    loop: true,
-    slidesPerView: 3,
+    effect: "coverflow",
     coverflowEffect: {
       rotate: 60,
-      stretch: 0,
       depth: 100,
-      modifier: 1,
       slideShadows: false,
+      modifier: 1,
     },
+    slidesPerView: 3,
     spaceBetween: 40,
+    direction: "horizontal",
+    centeredSlides: true,
+    loop: true,
     speed: 1000,
+    grabCursor: true,
     autoplay: {
-      delay: 1500,
+      delay: 1000,
     },
-    
   });
