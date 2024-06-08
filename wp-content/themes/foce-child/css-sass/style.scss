@@ -193,8 +193,54 @@ span.TitleFade {
 .bigCloud {
   height: 135px;
 }
-
 .littleCloud {
   height: 300px;
   margin-left: 15px;
+}
+/* MENU */
+/*... Line */
+.line {
+  position: absolute;
+  display: block;
+  background: #000;
+  width: 35px !important;
+  height: 20px;
+}
+/*... Position Toggle */
+ .toggle {
+  position: absolute;
+  cursor: pointer;
+  left: 90%;
+  height: 35px;
+}
+/*... Open/Closed Menu */
+ .ouvrir {
+  display: block;
+}
+.closed {
+  display: none;
+}
+.open .ouvrir {
+  display: none;
+}
+.open .menuClosed {
+  display: block;
+}
+.open .menuOpen {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 0.5s ease; 
+}
+/*... Logo Menu */
+.menuLogo {
+  text-align: center;
+}
+.menuLogo img {
+  width: 150px;
+  height: 100px;
+}
+/*... Footer Menu */
+.menuFooter p {
+  margin-top: 60px;
+  font-size: 15px;
 }
