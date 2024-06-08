@@ -18,11 +18,19 @@ get_header();
 
             <!-- Swiper Section -->
             <?php get_template_part( 'templates/characters' ) ;?>
-            <!-- Fin Swiper Section -->
+            <!-- End Swiper Section -->
 
             <article id="place">
                 <div>
                     <h3><span class="TitleFade">Lieu</span></h3>
+
+            <!-- Add Clouds+Parallax Section -->
+            <div class="clouds">
+            <img class="bigCloud" src="<?php echo get_theme_file_uri() . '/assets/images/big_cloud.png' ; ?> " alt="Gros Nuage">
+            <img class="littleCloud" src="<?php echo get_theme_file_uri() . '/assets/images/little_cloud.png' ; ?> " alt="Petit Nuage">
+            </div>
+            <!-- End Clouds+Parallax Section -->
+
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
 

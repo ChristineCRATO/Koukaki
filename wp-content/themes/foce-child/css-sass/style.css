@@ -163,7 +163,8 @@ span.TitleFade {
 .observ:nth-child(2) {
   animation: FadeInUp 0.7s ease-in-out forwards;
   animation-delay: 0.3s;
-}*/
+}
+
 /* Swiper */
 /*... General Swiper Style */
 .mySwiper {
@@ -180,4 +181,26 @@ span.TitleFade {
 
 .swiper-slide-visible img {
   opacity: 1;
+}
+
+/* Clouds */
+/*... Add BackG Place */
+.story #place {
+  background-image: url("../assets/images/Studio_Koukaki-image_place.png");
+  overflow: hidden;
+}
+
+/*... Clouds Position */
+.clouds {
+  position: relative;
+  margin-bottom: 68%;
+}
+
+.bigCloud {
+  height: 135px;
+}
+
+.littleCloud {
+  height: 300px;
+  margin-left: 15px;
 }/*# sourceMappingURL=style.css.map */

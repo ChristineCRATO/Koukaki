@@ -1,6 +1,7 @@
 console.log("Test de la Page");
 
-// Create Observer
+// Titles
+//... Create Observer
 const observer = new IntersectionObserver((entries, observer) => {
     console.log(entries)
     entries.forEach((entry) => {
@@ -12,9 +13,9 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, { rootMargin: '0px', threshold: 0 });
 
-// Selection all Title
+//... Selection all Title
 const AnimTitle = document.querySelectorAll('span.title');
-// Monitoring Span Display Titles
+//... Monitoring Span Display Titles
 AnimTitle.forEach((section) => {
     observer.observe(section);
 });
@@ -39,3 +40,24 @@ var swiper = new Swiper(".swiper", {
       delay: 1000,
     },
   });
+
+  // Clouds Parallax Section
+  console.log("Animation Clouds");
+  function moveClouds() {
+      const divPlace = document.getElementById("place");
+      const bigCloud = divPlace.querySelector(".bigCloud");
+      const littleCloud = divPlace.querySelector(".littleCloud")
+      
+        // Adjustment of cloud displacement and initial position
+        const scrollY = window.scrollY;
+        const speedClouds = 0.3;
+        const debutPosition = 400;
+  
+    // Calculate new cloud position scroll function
+    const cloudPosition = -scrollY * speedClouds + debutPosition;
+    bigCloud.style.transform = `translateX(${cloudPosition}px)`;
+    littleCloud.style.transform = `translateX(${cloudPosition}px)`;
+  }
+  
+  // Add event listener for scrolling cloud movement
+  window.addEventListener("scroll", moveClouds);
