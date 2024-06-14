@@ -20,35 +20,29 @@
 	<?php wp_head(); ?>
 </head>
 
-<body class="menuNav" <?php body_class(); ?>>
+<body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'foce' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<nav id="site-navigation" class="main-navigation menu-burger">
-        <ul class="menuClosed">
-            <li class="site-title">
-                <h1 class="menuTitle">Fleur d'oranger & chats errants</h1>
-            </li>
+		<nav id="site-navigation" class="main-navigation">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-title" rel="home"><?php bloginfo( 'name' ); ?></a>
         <div class="menuToggle">
-            <button class="menuButton" aria-controls="primary-menu" aria-expanded="false">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
-            </button>
-        </div>
-        </ul>
-            <ul class="menuNav">
+                <ul class="menuNav">
+            <div class="menuSection">
                 <li><a href="#story" class="linkNav">Histoire</a></li>
                 <li><a href="#characters" class="linkNav">Personnages</a></li>
                 <li><a href="#place" class="linkNav">Lieu</a></li>
                 <li><a href="#studio" class="linkNav">Studio Koukaki</a></li>
-            </ul>
+</div>
+</ul>
             <div class="menuLogo">
-                <img class="logoNav" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo.png'?>" alt="Logo Site Koukaki">
+                <img id="#menuLogo" class="logoNav" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo.png'?>" alt="Logo Site Koukaki">
             </div>
-        <div class="menuOpen">
             <div class="menuFlowers">
                 <img class="orchid" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/orchid.png'?>" alt="Rotation Orchid">
                 <img class="Sunflower" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/Sunflower.png'?>" alt="Rotation Sunflower">
@@ -63,7 +57,6 @@
             </div>
             <div class="menuFooter"><p>STUDIO KOUKAKI</p></div>
         </div>
-</div>
             
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

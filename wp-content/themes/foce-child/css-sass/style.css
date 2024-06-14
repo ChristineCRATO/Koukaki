@@ -349,7 +349,7 @@ h3 {
   top: 80px;
 }
 
-.menuNav {
+.menuSection {
   height: 50%;
   display: flex;
   flex-direction: column;
@@ -384,13 +384,10 @@ h3 {
 
 /* Animation */
 /*... Animation Flowers */
-.menuFlowers {
-  position: absolute;
-  height: auto;
-}
-
 .orchid, .Sunflower, .flower, .random, .Hibiscus {
-  animation: RotateFlowers 15s linear infinite;
+  position: absolute;
+  animation: RotateFlowers 18s linear infinite;
+  height: auto;
 }
 .orchid .orchid, .Sunflower .orchid, .flower .orchid, .random .orchid, .Hibiscus .orchid {
   top: 50px;
@@ -402,16 +399,10 @@ h3 {
   left: 70px;
   width: 200px;
 }
-.orchid .menuFlowers img.Sunflower, .Sunflower .menuFlowers img.Sunflower, .flower .menuFlowers img.Sunflower, .random .menuFlowers img.Sunflower, .Hibiscus .menuFlowers img.Sunflower {
-  width: 5%;
-}
 .orchid .flower, .Sunflower .flower, .flower .flower, .random .flower, .Hibiscus .flower {
   top: 320px;
   left: 25px;
   width: 50px;
-}
-.orchid .menuFlowers img.flower, .Sunflower .menuFlowers img.flower, .flower .menuFlowers img.flower, .random .menuFlowers img.flower, .Hibiscus .menuFlowers img.flower {
-  width: 13%;
 }
 .orchid .random, .Sunflower .random, .flower .random, .random .random, .Hibiscus .random {
   top: 250px;
@@ -425,7 +416,7 @@ h3 {
 }
 
 /*... Animation Cat */
-.menuCats {
+.black, .blue, .orange {
   position: absolute;
   height: auto;
 }
@@ -437,10 +428,6 @@ h3 {
   animation: floatCatBlack 8s 5s infinite ease-in-out;
 }
 
-.menuCats img.black {
-  width: 10%;
-}
-
 .blue {
   top: 125px;
   left: 35px;
@@ -448,19 +435,11 @@ h3 {
   animation: floatCatBlue 8s 5s infinite ease-in-out;
 }
 
-.menuCats img.blue {
-  width: 8%;
-}
-
 .orange {
   top: 450px;
   left: 5px;
   width: 115px;
   animation: floatCatOrange 8s 5s infinite ease-in-out;
-}
-
-.menuCats img.orange {
-  width: 8%;
 }
 
 @keyframes floatCatBlack {

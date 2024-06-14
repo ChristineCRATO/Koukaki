@@ -339,7 +339,7 @@ div::before {
       top: 80px;
     }
   }
-  .menuNav {
+  .menuSection {
     height: 50%;
     display: flex;
     flex-direction: column;
@@ -370,12 +370,10 @@ div::before {
 }
 /* Animation */
 /*... Animation Flowers */
-.menuFlowers {
-  position: absolute;
-  height: auto;
-}
 .orchid, .Sunflower, .flower, .random, .Hibiscus {
-  animation: RotateFlowers 15s linear infinite;
+  position: absolute;
+  animation: RotateFlowers 18s linear infinite;
+  height: auto;
   .orchid {
     top: 50px;
     left: -55px;
@@ -386,16 +384,10 @@ div::before {
     left: 70px;
     width: 200px;
   }
-  .menuFlowers img.Sunflower {
-    width: 5%;
-  }
   .flower {
     top: 320px;
     left: 25px;
     width: 50px;
-  }
-  .menuFlowers img.flower {
-    width: 13%;
   }
   .random {
     top: 250px;
@@ -409,7 +401,7 @@ div::before {
   }
 }
 /*... Animation Cat */
-.menuCats {
+.black, .blue, .orange {
   position: absolute;
   height: auto;
 }
@@ -419,27 +411,18 @@ div::before {
     width: 130px;
     animation: floatCatBlack 8s 5s infinite ease-in-out;
   }
-.menuCats img.black {
-  width: 10%;
-}
   .blue {
     top: 125px;
     left: 35px;
     width: 120px;
     animation: floatCatBlue 8s 5s infinite ease-in-out;
   }
-.menuCats img.blue {
-  width: 8%;
-}
   .orange {
     top: 450px;
     left: 5px;
     width: 115px;
     animation: floatCatOrange 8s 5s infinite ease-in-out;
   }
-.menuCats img.orange {
-  width: 8%;
-}
 
   @keyframes floatCatBlack {
     0% {
