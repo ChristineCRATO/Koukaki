@@ -1,6 +1,6 @@
 <article id="characters" class="characters-swiper">
     <div class="main-character">
-        <h3><span class="TitleFade">Les personnages</span></h3>
+        <h3><span class="TitleFade titlePerso">Les personnages</span></h3>
         <?php
             $args = array(
                 'post_type' => 'characters',

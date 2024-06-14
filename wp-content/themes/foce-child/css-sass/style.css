@@ -8,16 +8,14 @@
   align-items: center;
   margin-top: 10px;
 }
-
-.logoscars {
+.oscars .logoscars {
   position: absolute;
   width: 279px;
   height: 129px;
   top: 130px;
   left: 950px;
 }
-
-.blocImgText {
+.oscars .blocImgText {
   position: absolute;
   background-image: url("../assets/images/orangeOscars.png");
   background-repeat: no-repeat;
@@ -27,14 +25,13 @@
   max-width: 100%;
   height: 370px;
 }
-
-.txt-oscars {
+.oscars .txt-oscars {
   text-align: left;
   font-size: 40px;
   line-height: 1.2;
   /*...Add flowers Oscars Section */
 }
-.txt-oscars::before {
+.oscars .txt-oscars::before {
   content: url("../assets/images/Sunflower.png");
   position: absolute;
   left: -40px;
@@ -42,7 +39,7 @@
   max-width: 100%;
   height: auto;
 }
-.txt-oscars::after {
+.oscars .txt-oscars::after {
   content: url("../assets/images/orchid.png");
   position: absolute;
   left: 1205px;
@@ -61,7 +58,7 @@
 /*...FadeInUp */
 #characters, .story, #place, #studio, #oscars {
   opacity: 0;
-  animation: FadeInUp 5s forwards;
+  animation: FadeInUp 3s forwards;
 }
 
 @keyframes FadeInUp {
@@ -124,45 +121,46 @@ div::before {
 }
 
 /* FADE Title */
-/*... BackG 
+/*... BackG */
 @keyframes FadeBackGTitle {
   from {
-      background-position : 0 300px;
-      opacity: 0;
+    background-position: 0 300px;
+    opacity: 0;
   }
   to {
-      background-position: 0 0;
-      opacity: 1;
-  }
-}
-/*... Animate Title 1, 2, 3 et 4 
-@keyframes AnimTitle {
-  0% {
-    transform : translateY(100px)
-  }
-  100%{
-    transform: translateY(0);
+    background-position: 0 0;
     opacity: 1;
   }
 }
-/*... Title Section 
-span.TitleFade {
+/*... Animate Title 1, 2, 3 et 4 */
+@keyframes AnimTitle {
+  0% {
+    transform: translateY(60px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/*... Title Section */
+.TitleFade {
   display: inline-block;
   opacity: 0;
   transform: translateY(100px);
-  transition: transform 1s, opacity 0.5s;
 }
+
 .observ {
   opacity: 1;
   transform: translateY(0);
-  transition-duration: 3s, opacity 2s;
+  transition: transform 2s, opacity 1s;
 }
+
 .observ:nth-child(1) {
-  animation: FadeInUp 0.7s ease-in-out forwards;
+  animation: AnimTitle 0.7s ease-in-out forwards;
 }
+
 .observ:nth-child(2) {
-  animation: FadeInUp 0.7s ease-in-out forwards;
-  animation-delay: 0.3s;
+  animation: AnimTitle 0.4s ease-in-out forwards;
+  animation-delay: 0.4s;
 }
 
 /* Swiper */
@@ -172,15 +170,22 @@ span.TitleFade {
   display: flex;
   justify-content: left;
 }
-
-.swiper-slide img {
+.mySwiper .swiper-slide img {
   opacity: 0;
   transition-duration: 800ms;
   transform: translate3d(10px, 0px, -15px) rotateX(0deg) rotateY(0deg) scale(1);
 }
-
-.swiper-slide-visible img {
+.mySwiper .swiper-slide-visible img {
   opacity: 1;
+}
+
+.titlePerso {
+  padding: 1.5rem 2rem !important;
+}
+
+h3 {
+  background-position: left !important;
+  text-align: left !important;
 }
 
 /* Clouds */
@@ -192,72 +197,320 @@ span.TitleFade {
 
 /*... Clouds Position */
 .clouds {
-  position: relative;
-  margin-bottom: 68%;
-}
-
-.bigCloud {
-  height: 135px;
-}
-
-.littleCloud {
-  height: 300px;
-  margin-left: 15px;
-}
-
-/* MENU */
-/*... Line */
-.line {
   position: absolute;
-  display: block;
-  background: #000;
-  width: 35px !important;
-  height: 20px;
+  filter: blur(13px);
+  right: 115px;
+  top: 65px;
+}
+.clouds .bigCloud {
+  height: 122px;
+}
+.clouds .littleCloud {
+  margin-left: -200px;
+  margin-top: 65px;
+  height: 55px;
+}
+
+/* BANNER */
+/*... Logo Position */
+.banner {
+  position: relative;
+  animation: backGimGD 3s, fadeIn 3.5s;
+}
+.bannerVideo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.bannerImg {
+  position: sticky;
+  top: 80px;
+  z-index: 12;
+  opacity: 1;
+  animation: textImgUp 2s 300ms both, floatIng 5s infinite ease-in-out;
+}
+.banner .textImgUp {
+  animation: textImgUp 2s 300ms both;
+}
+
+/*... Keyframes Banner */
+@keyframes backGimGD {
+  0% {
+    transform: translateY(-250px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes textImgUp {
+  0% {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes floatIng {
+  0% {
+    transform: translate3d(8px, 8px, 0);
+  }
+  13% {
+    transform: translate3d(0px, 8px, 0);
+  }
+  25% {
+    transform: translate3d(8px, -6px, 0);
+  }
+  35% {
+    transform: translate3d(8px, 0px, 0);
+  }
+  46% {
+    transform: translate3d(-6px, -8px, 0);
+  }
+  60% {
+    transform: translate3d(0px, -6px, 0);
+  }
+  73% {
+    transform: translate3d(-10px, 8px, 0);
+  }
+  85% {
+    transform: translate3d(-6px, 0px, 0);
+  }
+  100% {
+    transform: translate3d(8px, 8px, 0);
+  }
+}
+/* MENU */
+/*... Animation Menu Lines "X" when active */
+.main-navigation {
+  background-color: #ffd5a2;
+  display: flex;
+  width: 100%;
+}
+.main-navigation .site-title {
+  display: flex !important;
+  align-items: center;
+  margin-left: 38%;
+}
+.main-navigation .site-title:hover {
+  color: black;
 }
 
 /*... Position Toggle */
-.toggle {
+.menuToggle {
+  width: 110px;
+  height: 65px;
   position: absolute;
   cursor: pointer;
-  left: 90%;
-  height: 35px;
+  margin-left: 90%;
+  margin-top: 35px;
+  /*... Line */
 }
-
-/*... Open/Closed Menu */
-.ouvrir {
+.menuToggle.active .line:nth-child(2) {
+  opacity: 0;
+}
+.menuToggle.active .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menuToggle.active .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.menuToggle .line {
+  position: absolute;
   display: block;
+  background: black;
+  width: 45px !important;
+  height: 3px !important;
 }
 
-.closed {
-  display: none;
-}
-
-.open .ouvrir {
-  display: none;
-}
-
-.open .menuClosed {
-  display: block;
-}
-
-.open .menuOpen {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 1s ease, visibility 0.5s ease;
-}
-
-/*... Logo Menu */
-.menuLogo {
+.menuNav,
+.menuLogo,
+.menuFlowers,
+.menuCats,
+.menuFooter {
+  position: fixed;
+  top: -300%;
+  left: 0;
+  flex-direction: column;
+  background-color: #fff5e9;
+  width: 100%;
   text-align: center;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.menuNav.active,
+.menuLogo.active,
+.menuFlowers.active,
+.menuCats.active,
+.menuFooter.active {
+  left: 0;
+  top: 80px;
 }
 
-.menuLogo img {
-  width: 150px;
-  height: 100px;
+.menuNav {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.linkNav {
+  font-size: 32px;
+  transition: 0.7s ease;
+  pointer-events: auto;
+}
+.linkNav:hover {
+  color: black;
+  text-shadow: 0 0 10px rgb(255, 168, 133);
+  transition: opacity 0.3s;
+}
+
+.menuLogo {
+  display: flex;
+  align-items: center;
+}
+.menuLogo .logoNav {
+  width: 200px;
+  height: auto;
 }
 
 /*... Footer Menu */
 .menuFooter p {
   margin-top: 60px;
   font-size: 15px;
+}
+
+/* Animation */
+/*... Animation Flowers */
+.menuFlowers {
+  position: absolute;
+  height: auto;
+}
+
+.orchid, .Sunflower, .flower, .random, .Hibiscus {
+  animation: RotateFlowers 15s linear infinite;
+}
+.orchid .orchid, .Sunflower .orchid, .flower .orchid, .random .orchid, .Hibiscus .orchid {
+  top: 50px;
+  left: -55px;
+  width: 150px;
+}
+.orchid .Sunflower, .Sunflower .Sunflower, .flower .Sunflower, .random .Sunflower, .Hibiscus .Sunflower {
+  top: 60px;
+  left: 70px;
+  width: 200px;
+}
+.orchid .menuFlowers img.Sunflower, .Sunflower .menuFlowers img.Sunflower, .flower .menuFlowers img.Sunflower, .random .menuFlowers img.Sunflower, .Hibiscus .menuFlowers img.Sunflower {
+  width: 5%;
+}
+.orchid .flower, .Sunflower .flower, .flower .flower, .random .flower, .Hibiscus .flower {
+  top: 320px;
+  left: 25px;
+  width: 50px;
+}
+.orchid .menuFlowers img.flower, .Sunflower .menuFlowers img.flower, .flower .menuFlowers img.flower, .random .menuFlowers img.flower, .Hibiscus .menuFlowers img.flower {
+  width: 13%;
+}
+.orchid .random, .Sunflower .random, .flower .random, .random .random, .Hibiscus .random {
+  top: 250px;
+  left: -35px;
+  width: 50px;
+}
+.orchid .Hibiscus, .Sunflower .Hibiscus, .flower .Hibiscus, .random .Hibiscus, .Hibiscus .Hibiscus {
+  top: 350px;
+  left: -195px;
+  width: 50px;
+}
+
+/*... Animation Cat */
+.menuCats {
+  position: absolute;
+  height: auto;
+}
+
+.black {
+  top: 300px;
+  left: 50px;
+  width: 130px;
+  animation: floatCatBlack 8s 5s infinite ease-in-out;
+}
+
+.menuCats img.black {
+  width: 10%;
+}
+
+.blue {
+  top: 125px;
+  left: 35px;
+  width: 120px;
+  animation: floatCatBlue 8s 5s infinite ease-in-out;
+}
+
+.menuCats img.blue {
+  width: 8%;
+}
+
+.orange {
+  top: 450px;
+  left: 5px;
+  width: 115px;
+  animation: floatCatOrange 8s 5s infinite ease-in-out;
+}
+
+.menuCats img.orange {
+  width: 8%;
+}
+
+@keyframes floatCatBlack {
+  0% {
+    transform: translate3d(15px, 8px, 0);
+  }
+  15% {
+    transform: translate3d(1px, -17px, 0);
+  }
+  40% {
+    transform: translate3d(5px, 2px, 0);
+  }
+  70% {
+    transform: translate3d(8px, -12px, 0);
+  }
+  80% {
+    transform: translate3d(4px, 2px, 0);
+  }
+  100% {
+    transform: translate3d(15px, 8px, 0);
+  }
+}
+@keyframes floatCatBlue {
+  0% {
+    transform: translate3d(-5px, 10px, 0);
+  }
+  15% {
+    transform: translate3d(8px, -7px, 0);
+  }
+  50% {
+    transform: translate3d(-5px, 2px, 0);
+  }
+  70% {
+    transform: translate3d(8px, -12px, 0);
+  }
+  100% {
+    transform: translate3d(-5px, 10px, 0);
+  }
+}
+@keyframes floatCatOrange {
+  0% {
+    transform: translate3d(3px, 6px, 0);
+  }
+  15% {
+    transform: translate3d(-7px, -14px, 0);
+  }
+  70% {
+    transform: translate3d(-12px, 0px, 0);
+  }
+  100% {
+    transform: translate3d(5px, 10px, 0);
+  }
 }/*# sourceMappingURL=style.css.map */

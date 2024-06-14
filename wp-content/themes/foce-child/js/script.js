@@ -1,23 +1,20 @@
 console.log("Test de la Page");
 
 // ******************* TITLES ******************* //
+//... Selection all Title
+const AnimTitle = document.querySelectorAll(".TitleFade");
 //... Create Observer
-const observer = new IntersectionObserver((entries, observer) => {
+const observer = new IntersectionObserver((entries) => {
     console.log(entries)
     entries.forEach((entry) => {
         if(entry.isIntersecting) {
             entry.target.classList.add('observ');
-        } else {
-            entry.target.classList.remove('observ');
+            return;
         }
     });
-}, { rootMargin: '0px', threshold: 0 });
-//... Selection all Title
-const AnimTitle = document.querySelectorAll('span.title');
-//... Monitoring Span Display Titles
-AnimTitle.forEach((section) => {
-    observer.observe(section);
 });
+//... Monitoring Span Display Titles
+AnimTitle.forEach((span) => observer.observe(span));
 
 // ******************* SWIPER ******************* //
 var swiper = new Swiper(".swiper", {
@@ -42,38 +39,54 @@ var swiper = new Swiper(".swiper", {
 
   // ******************* CLOUDS PARALLAX SECTION ******************* //
   console.log("Animation Clouds");
-  function moveClouds() {
       const divPlace = document.getElementById("place");
       const bigCloud = divPlace.querySelector(".bigCloud");
       const littleCloud = divPlace.querySelector(".littleCloud")
+      //... Add event listener for scrolling cloud movement
+      window.addEventListener("scroll", () => {;
         //... Adjustment of cloud displacement and initial position
         const scrollY = window.scrollY;
         const speedClouds = 0.3;
-        const debutPosition = 400;
+        const debutPosition = 300;
     //... Calculate new cloud position scroll function
-    const cloudPosition = -scrollY * speedClouds + debutPosition;
+    const cloudPosition = debutPosition - scrollY * speedClouds;
     bigCloud.style.transform = `translateX(${cloudPosition}px)`;
     littleCloud.style.transform = `translateX(${cloudPosition}px)`;
-  }
-  //... Add event listener for scrolling cloud movement
-  window.addEventListener("scroll", moveClouds);
+  });
 
   // ******************* MENU BURGER ******************* //
-  //... Selected Button
-const burgerButton = document.querySelector(".nav-toggler")
-const navigation = document.querySelector("nav");
+
+  //... Selected class menuToggle DOM
+const menuToggle = document.querySelector(".menuToggle");
+
+//... Selected Clic menuToggle
+const partToggle = [
+    document.querySelector(".menuNav"),
+    document.querySelector(".menuLogo"),
+    document.querySelector(".menuFlowers"),
+    document.querySelector(".menuCats"),
+    document.querySelector(".menuFooter"),
+  ];  
+
 //... Add Listener Button Menu Clic ToggleNav
-burgerButton.addEventListener("click", toggleNav);
+menuToggle.addEventListener("click", toggleNav);
+
+//... Add Listener Clic Parts ToggleNav
+partToggle.forEach((part) =>
+part.addEventListener("click", toggleNav)
+);
+
+//... Add Listener Clic Links ToggleNav
+document
+.querySelectorAll(".linkNav")
+.forEach((link) => link.addEventListener("click", closedMenu));
 
 function toggleNav() {
-    //... ToggleNav add/delete class 'active' Button Nav
-    burgerButton.classList.toggle("active");
-    navigation.classList.toggle("active");
+    //... ToggleNav add/delete class 'active' menuToggle
+    menuToggle.classList.toggle("active");
+    partToggle.forEach((part) => part.classList.toggle("active"));
 }
-    //... Add class Open&Closed Menu
-    let toggle = document.querySelector(".toggle");
-    let body = document.querySelector("body");
-    //... Add Listener "Toggle"
-    toggle.addEventListener('click', function () {
-        body.classList.toggle('open');
-    });
+function closedMenu () {
+    menuToggle.classList.remove("active");
+    partToggle.forEach((part) => part.classList.remove("active"));
+}
