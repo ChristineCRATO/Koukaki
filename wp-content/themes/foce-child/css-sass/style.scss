@@ -287,7 +287,6 @@ div::before {
     display: flex !important;
     align-items: center;
     margin-left: 38%;
-
     &:hover {
       color: black;
     }
@@ -298,26 +297,28 @@ div::before {
   height: 65px;
   position: absolute;
   cursor: pointer;
-  margin-left: 90%;
-  margin-top: 35px;
+  margin-left: 87%;
+  margin-top: 25px;
   &.active {
     .line:nth-child(2) {
       opacity: 0;
     }
     .line:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
+      transform: translateY(9px) rotate(50deg);
     }
     .line:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
+      transform: translateY(-9px) rotate(-50deg);
     }
   }
   /*... Line */
   .line {
-    position: absolute;
     display: block;
     background: black;
     width: 45px !important;
     height: 3px !important;
+    margin: 6px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
  }
 .menuNav,
@@ -326,7 +327,7 @@ div::before {
   .menuCats,
   .menuFooter {
     position: fixed;
-    top: -300%;
+    top: 980px;
     left: 0;
     flex-direction: column;
     background-color: #fff5e9;
@@ -346,12 +347,12 @@ div::before {
     justify-content: space-between;
   }
   .linkNav {
-    font-size: 32px;
+    font-size: 56px;
     transition: 0.7s ease;
     pointer-events: auto;
     &:hover {
       color: black;
-      text-shadow: 0 0 10px rgb(255, 168, 133);
+      text-shadow: 0 0 10px #ffa885 ;
       transition: opacity 0.3s;
     }
   }
@@ -363,11 +364,7 @@ div::before {
       height: auto;
     }
   }
-/*... Footer Menu */
-.menuFooter p {
-  margin-top: 60px;
-  font-size: 15px;
-}
+  
 /* Animation */
 /*... Animation Flowers */
 .orchid, .Sunflower, .flower, .random, .Hibiscus {
@@ -376,27 +373,27 @@ div::before {
   height: auto;
   .orchid {
     top: 50px;
-    left: -55px;
+    left: 12%;
     width: 150px;
   }
   .Sunflower {
     top: 60px;
-    left: 70px;
+    left: 7%;
     width: 200px;
   }
   .flower {
     top: 320px;
-    left: 25px;
+    left: 23%;
     width: 50px;
   }
   .random {
     top: 250px;
-    left: -35px;
+    left: 43%;
     width: 50px;
   }
   .Hibiscus {
     top: 350px;
-    left: -195px;
+    left: 12%;
     width: 50px;
   }
 }
@@ -406,22 +403,22 @@ div::before {
   height: auto;
 }
   .black {
-    top: 300px;
-    left: 50px;
+    top: 390px;
+    left: 75%;
     width: 130px;
-    animation: floatCatBlack 8s 5s infinite ease-in-out;
+    animation: floatCatBlack 3s 2s infinite ease-in-out;
   }
   .blue {
-    top: 125px;
-    left: 35px;
+    top: 170px;
+    left: 24%;
     width: 120px;
-    animation: floatCatBlue 8s 5s infinite ease-in-out;
+    animation: floatCatBlue 3s 2s infinite ease-in-out;
   }
   .orange {
-    top: 450px;
-    left: 5px;
+    top: 610px;
+    left: 10%;
     width: 115px;
-    animation: floatCatOrange 8s 5s infinite ease-in-out;
+    animation: floatCatOrange 3s 2s infinite ease-in-out;
   }
 
   @keyframes floatCatBlack {
