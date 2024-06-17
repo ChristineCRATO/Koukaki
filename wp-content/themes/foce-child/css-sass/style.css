@@ -215,7 +215,7 @@ h3 {
 /*... Logo Position */
 .banner {
   position: relative;
-  animation: backGimGD 3s, fadeIn 3.5s;
+  animation: backGimGD 3s, fadeInDown 3.5s;
 }
 .bannerVideo {
   position: absolute;
@@ -238,7 +238,7 @@ h3 {
 /*... Keyframes Banner */
 @keyframes backGimGD {
   0% {
-    transform: translateY(-250px);
+    transform: translateY(-350px);
   }
   100% {
     transform: translateY(0);
@@ -329,8 +329,7 @@ h3 {
 .menuNav,
 .menuLogo,
 .menuFlowers,
-.menuCats,
-.menuFooter {
+.menuCats, .menuFooter {
   position: fixed;
   top: 980px;
   left: 0;
@@ -344,8 +343,7 @@ h3 {
 .menuNav.active,
 .menuLogo.active,
 .menuFlowers.active,
-.menuCats.active,
-.menuFooter.active {
+.menuCats.active, .menuFooter.active {
   left: 0;
   top: 80px;
 }
@@ -377,37 +375,55 @@ h3 {
   height: auto;
 }
 
+.logoNav {
+  position: absolute;
+  top: 40px;
+  width: 9% !important;
+  -webkit-filter: drop-shadow(0px 0px 10px #ff5c00);
+}
+
+.footerNav {
+  position: absolute;
+  left: 46%;
+  top: 660px;
+}
+
 /* Animation */
 /*... Animation Flowers */
 .orchid, .Sunflower, .flower, .random, .Hibiscus {
   position: absolute;
-  animation: RotateFlowers 18s linear infinite;
   height: auto;
+  animation: RotateFlowers 18s linear infinite;
 }
-.orchid .orchid, .Sunflower .orchid, .flower .orchid, .random .orchid, .Hibiscus .orchid {
-  top: 50px;
-  left: 12%;
+
+.orchid {
+  top: 70px;
+  left: -3%;
   width: 150px;
 }
-.orchid .Sunflower, .Sunflower .Sunflower, .flower .Sunflower, .random .Sunflower, .Hibiscus .Sunflower {
-  top: 60px;
-  left: 7%;
+
+.Sunflower {
+  top: 90px;
+  left: 70%;
   width: 200px;
 }
-.orchid .flower, .Sunflower .flower, .flower .flower, .random .flower, .Hibiscus .flower {
-  top: 320px;
-  left: 23%;
+
+.flower {
+  top: 410px;
+  left: 18%;
   width: 50px;
 }
-.orchid .random, .Sunflower .random, .flower .random, .random .random, .Hibiscus .random {
-  top: 250px;
-  left: 43%;
-  width: 50px;
-}
-.orchid .Hibiscus, .Sunflower .Hibiscus, .flower .Hibiscus, .random .Hibiscus, .Hibiscus .Hibiscus {
+
+.random {
   top: 350px;
-  left: 12%;
+  left: 98%;
   width: 50px;
+}
+
+.Hibiscus {
+  top: 530px;
+  left: 86%;
+  width: 28%;
 }
 
 /*... Animation Cat */
@@ -417,22 +433,22 @@ h3 {
 }
 
 .black {
-  top: 390px;
+  top: 420px;
   left: 75%;
   width: 130px;
   animation: floatCatBlack 3s 2s infinite ease-in-out;
 }
 
 .blue {
-  top: 170px;
-  left: 24%;
+  top: 160px;
+  left: 20%;
   width: 120px;
   animation: floatCatBlue 3s 2s infinite ease-in-out;
 }
 
 .orange {
   top: 610px;
-  left: 10%;
+  left: 8%;
   width: 115px;
   animation: floatCatOrange 3s 2s infinite ease-in-out;
 }

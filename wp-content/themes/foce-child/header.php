@@ -41,7 +41,7 @@
 </div>
 </ul>
             <div class="menuLogo">
-                <img id="#menuLogo" class="logoNav" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo.png'?>" alt="Logo Site Koukaki">
+                <img id="#menuLogo" class="logoNav" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo2.png'?>" alt="Logo Site Koukaki">
             </div>
             <div class="menuFlowers">
                 <img class="orchid" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/orchid.png'?>" alt="Rotation Orchid">
@@ -55,7 +55,9 @@
                 <img class="blue" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/blueCat.png'?>" alt="Chat Bleu Tangue">
                 <img class="orange" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/orangeCat.png'?>" alt="Chat Orange Tangue">
             </div>
-            <div class="menuFooter"><p>STUDIO KOUKAKI</p></div>
+            <div class="menuFooter">
+                <p class="footerNav">STUDIO KOUKAKI</p>
+            </div>
         </div>
             
 		</nav><!-- #site-navigation -->
