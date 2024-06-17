@@ -47,6 +47,12 @@
     }
   }
 }
+/*... Media */
+@media (max-width: 859px) {
+  .txt-oscars {
+    font-size: 23px !important;
+  }
+}
 /*...Delete Flowers Footer before & after */
 .site-footer {
   &::before,
@@ -63,20 +69,39 @@
   animation: FadeInUp 3s forwards;
 }
 @keyframes FadeInUp {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(400px);
+    transform: translateY(50px);
   } 
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);  
   }
 }
-/*...FadeInDown */
+/*... Applies Animation Section */
+.story {
+  animation-delay: 1s;
+}
+#characters {
+  animation-delay: 2s;
+}
+#place {
+  animation-delay: 3s;
+}
+#studio {
+  animation-delay: 4s;
+}
+#oscars {
+  animation-delay: 5s;
+}
+/*... FadeInDown * "à voir"
+.bannerImg .story__article #studio {
+animation :fadeInDown 3s;
+}
 @keyframes FadeInDown {
   from {
     opacity: 0;
-    transform: translateY(-300px);
+    transform: translateY(-250px);
   }  
   to {
     opacity: 1;
@@ -183,7 +208,18 @@ div::before {
     background-position: left !important;
     text-align: left !important;
   }
-
+/*... Media */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .mySwiper {
+    width: 100%;
+    overflow: auto !important;
+    padding-bottom: 0px;
+    img {
+      min-width: 100px !important;
+      position: relative !important;
+    }
+  }
+}
 /* Clouds */
 /*... Add BackG Place */
 .story #place {
@@ -273,6 +309,26 @@ div::before {
   }
   100% {
     transform: translate3d(8px,8px,0); 
+  }
+}
+/*... Media */
+@media (max-width: 768px) {
+  .banner {
+    min-height: 400px;
+  }
+/*... Hide video mobile version */
+  .bannerVideo {
+    display: none;
+  }
+/*... Display img mobile version */
+  .bannerLogo {
+    display: block;
+  }
+}
+@media (max-width: 1024px) {
+  .banner {
+    max-width: 1024px;
+    height: auto;
   }
 }
 
@@ -482,5 +538,11 @@ div::before {
     }
     100% {
       transform: translate3d(5px, 10px, 0);
+    }
+  }
+  /*... Media */
+  @media (max-width: 1440px){
+    .blue, .black, .orange, .orchid, .Sunflower, .flower, .random, .Hibiscus, .menuToggle::before {
+        display: none;
     }
   }
