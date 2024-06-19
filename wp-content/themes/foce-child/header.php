@@ -29,17 +29,17 @@
 		<nav id="site-navigation" class="main-navigation">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-title" rel="home"><?php bloginfo( 'name' ); ?></a>
         <div class="menuToggle">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-                <ul class="menuNav">
-            <div class="menuSection">
-                <li><a href="#story" class="linkNav">Histoire</a></li>
-                <li><a href="#characters" class="linkNav">Personnages</a></li>
-                <li><a href="#place" class="linkNav">Lieu</a></li>
-                <li><a href="#studio" class="linkNav">Studio Koukaki</a></li>
-</div>
-</ul>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <ul class="menuNav">
+                <div class="menuSection">
+                    <li><a href="#story" class="linkNav">Histoire</a></li>
+                    <li><a href="#characters" class="linkNav">Personnages</a></li>
+                    <li><a href="#place" class="linkNav">Lieu</a></li>
+                    <li><a href="#studio" class="linkNav">Studio Koukaki</a></li>
+                </div>
+            </ul>
             <div class="menuLogo">
                 <img id="#menuLogo" class="logoNav" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo2.png'?>" alt="Logo Site Koukaki">
             </div>
