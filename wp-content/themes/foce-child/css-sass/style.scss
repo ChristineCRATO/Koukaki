@@ -220,7 +220,7 @@ div::before {
   animation-delay: 0.4s;
 }
 @media only screen and (min-width : 320px) and (max-width : 767px) {
-  #studio h2 {
+  #studio, h2 {
     font-size: 20px !important;
   }
 }
@@ -228,7 +228,7 @@ div::before {
 /* Swiper */
 /*... General Swiper Style */
 .mySwiper {
-  width: 1200px;
+  width: 1100px;
   display: flex;
   justify-content: left;  
   .swiper-slide img {
@@ -248,15 +248,36 @@ div::before {
     text-align: left !important;
   }
 /*... Media Swiper */
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .mySwiper {
-    width: 100%;
-    overflow: auto !important;
-    padding-bottom: 0px;
-    &img {
-      min-width: 100px !important;
-      position: relative !important;
-    }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .swiper, .mySwiper {
+    width: 85%;
+  }
+  .story #characters {
+    margin: 0;
+    height: 200px;
+    width: 90%;
+  }
+  .characters-swiper h3 {
+    align-self: center !important;
+    background-size: 70%;
+    padding: 15px 30px;
+  }
+  .titlePerso {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .swiper, .mySwiper {
+    width: 85%;
+  }
+  .story #characters {
+    margin: 0;
+    height: 350px;
+    width: 90%;
+  }
+  .characters-swiper h3 {
+    align-self: center;
+    background-size: 65%;
   }
 }
 /* Clouds */
@@ -590,6 +611,23 @@ div::before {
     }
   }
   /*... Media */
+  @media (max-width: 768px) {
+    .main-navigation {
+      max-width: 400px;
+      display: flex;
+      align-items: center;
+    }
+    .menuToggle {
+      width: 0%;
+      right: 90%;
+    }
+  }
+  @media (max-width: 1024px) {
+    .main-navigation {
+      max-width: 1024px;
+      height: 80px;
+    }
+  }
   @media (max-width: 1440px){
     .blue, .black, .orange, .orchid, .Sunflower, .flower, .random, .Hibiscus, .logoNav, .footerNav, .menuToggle::before {
         display: none;
