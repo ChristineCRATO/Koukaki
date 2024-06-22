@@ -46,7 +46,7 @@
   }
 }
 /*... Media */
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .txt-oscars {
     width: 100%;
     font-size: 14px !important;
@@ -56,8 +56,7 @@
     left: 0% !important;
   }
   .oscars .txt-oscars::after {
-    right: 20%;
-    bottom: -180%;
+    display: none;
   }
   .oscars .txt-oscars::before {
     display: none;
@@ -66,6 +65,20 @@
     background-size: 100%;
     left: 0%;
     padding-top:2%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .oscars .txt-oscars::after {
+    right: -1%;
+    bottom: 100% !important;
+  }
+  .logoscars {
+    top:-10% !important;
+    left:30% !important;
+  }
+  .oscars .blocImgText {
+    background-size: 100%;
+    left: 0%;
   }
 }
 /*...Delete Flowers Footer before & after */
@@ -240,7 +253,7 @@ div::before {
     opacity: 1;
     }
   }
-  .titlePerso {
+  .persoTitle {
     font-size: 40px;
   }
   h3 {
@@ -259,11 +272,11 @@ div::before {
   }
   .characters-swiper h3 {
     align-self: center !important;
-    background-size: 70%;
+    background-size: 50%;
     padding: 15px 30px;
   }
-  .titlePerso {
-    font-size: 17px;
+  .persoTitle {
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -278,6 +291,10 @@ div::before {
   .characters-swiper h3 {
     align-self: center;
     background-size: 65%;
+  }
+  .persoTitle {
+    font-size: 28px;
+    align-items: center;
   }
 }
 /* Clouds */
@@ -302,13 +319,30 @@ div::before {
   }
 }
 /*... Media Clouds */
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .story #place {
     min-height: 450px;
     margin-top: 50px;
   }
   .littleCloud, .bigCloud {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .bigCloud,
+    .littleCloud {
+      display: none !important;
+    }
+  }
+
+/* Media Studio Part */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .titleStudio h2 {
+    align-self: center;
+    background-size: 50%;
+  }
+  .studioTitle {
+    font-size: 20px !important;
   }
 }
 /* BANNER */
@@ -558,7 +592,6 @@ div::before {
     width: 115px;
     animation: floatCatOrange 3s 2s infinite ease-in-out;
   }
-
   @keyframes floatCatBlack {
     0% {
       transform: translate3d(15px, 8px, 0);
@@ -611,9 +644,17 @@ div::before {
     }
   }
   /*... Media */
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .main-navigation {
+      max-width: 767px; ;
+      display: flex;
+      align-items: center;
+    }
+  }
   @media (max-width: 768px) {
     .main-navigation {
-      max-width: 400px;
+      max-width: 768px;
+      height: 80px;
       display: flex;
       align-items: center;
     }

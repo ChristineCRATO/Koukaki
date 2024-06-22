@@ -105,7 +105,6 @@
   position: relative;
   margin-top: 3em;
   h2 {
-    overflow: hidden;
     background-image: url("./assets/images/purple_studio_bg.png");
     &::before {
       content: url('./assets/images/random_flower.png');
