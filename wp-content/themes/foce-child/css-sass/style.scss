@@ -223,10 +223,10 @@ div::before {
 .observ {
   opacity: 1;
   transform: translateY(0);
-  transition: transform 2s, opacity 1s;
+  transition: transform 4s, opacity 3s;
 }
 .observ:nth-child(1) {
-  animation: AnimTitle 0.7s ease-in-out forwards;
+  animation: AnimTitle 2s ease-in-out forwards;
 }
 .observ:nth-child(2) {
   animation: AnimTitle 0.4s ease-in-out forwards;
@@ -455,7 +455,7 @@ div::before {
   /*... Position Toggle */
   .menuToggle {
     width: 110px;
-    height: 65px;
+    height: 85px;
     z-index: 20;
   position: absolute;
   cursor: pointer;
@@ -499,9 +499,11 @@ div::before {
     &.active {
       left: 0;
       top: 80px;
+      display: block;
       }
     }
   .menuSection {
+    margin-top: 16%;
     height: 38%;
     display: flex;
     flex-direction: column;
@@ -521,6 +523,7 @@ div::before {
     display: flex;
     align-items: center;
     .logoNav {
+      left: 46%;
       width: 200px;
       height: auto;
     }
@@ -533,8 +536,8 @@ div::before {
 }
 .footerNav {
   position:absolute;
-  left: 45%;
-  top: 660px;
+  left: 46%;
+  top: 650px;
 }
 
 /* Animation */
@@ -667,6 +670,16 @@ div::before {
     .main-navigation {
       max-width: 1024px;
       height: 80px;
+    }
+  }
+  @media (max-width: 1200px) {
+    .main-navigation {
+      max-width: 1200px;
+    }
+  }
+  @media (max-width: 1500px) {
+    .main-navigation {
+      max-width: 1500px;
     }
   }
   @media (max-width: 1440px){
