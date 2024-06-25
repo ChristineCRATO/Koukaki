@@ -69,7 +69,7 @@
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .oscars .txt-oscars::after {
-    right: -1%;
+    right: 10%;
     bottom: 100% !important;
   }
   .logoscars {
@@ -79,6 +79,11 @@
   .oscars .blocImgText {
     background-size: 100%;
     left: 0%;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .oscars .txt-oscars::after {
+    display: none;
   }
 }
 /*...Delete Flowers Footer before & after */
@@ -236,12 +241,15 @@ div::before {
   #studio, h2 {
     font-size: 20px !important;
   }
+  .studioTitle {
+    background-position: 50% !important;
+  }
 }
 
 /* Swiper */
 /*... General Swiper Style */
 .mySwiper {
-  width: 1100px;
+  width: 1000px;
   display: flex;
   justify-content: left;  
   .swiper-slide img {
@@ -254,7 +262,7 @@ div::before {
     }
   }
   .persoTitle {
-    font-size: 40px;
+    font-size: 30px;
   }
   h3 {
     background-position: left !important;
@@ -264,6 +272,7 @@ div::before {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .swiper, .mySwiper {
     width: 85%;
+    bottom: 30px !important;
   }
   .story #characters {
     margin: 0;
@@ -272,7 +281,7 @@ div::before {
   }
   .characters-swiper h3 {
     align-self: center !important;
-    background-size: 50%;
+    background-position: 50%;
     padding: 15px 30px;
   }
   .persoTitle {
@@ -289,8 +298,9 @@ div::before {
     width: 90%;
   }
   .characters-swiper h3 {
+    margin-top: 30px !important;
     align-self: center;
-    background-size: 65%;
+    background-position: 65%;
   }
   .persoTitle {
     font-size: 28px;
@@ -647,43 +657,90 @@ div::before {
     }
   }
   /*... Media */
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    .main-navigation {
-      max-width: 767px; ;
+  @media (min-width: 300px) and (max-width: 767px) {
+    .site-header {
+      background-color: #ffd5a2;
+      height: 60px;
+    }
+    .site-title {
+      margin-top: 3% !important;
+      margin-left: 6% !important;
+      font-size: 20px !important;
+    }
+    .main-navigation .menuNav {
       display: flex;
-      align-items: center;
+      height: 100%;
+    }
+    .menuSection {
+      margin-top: -10% !important;
+      height: 35%;
+    }
+    .menuToggle {
+      top: -14%;
+      width: 0%;
+      left: -6%;
+    }
+    .linkNav {
+      font-size: 18px;
+    }
+    .footerNav {
+      margin-top: -20% !important;
+      left: 41% !important;
+    }
+    .orchid {
+      left: 10% !important;
+    }
+    .orchid,
+    .sunflower,
+    .flower,
+    .random,
+    .hibiscus,
+    .blue,
+    .black,
+    .orange {
+      max-width: 50px;
     }
   }
-  @media (max-width: 768px) {
-    .main-navigation {
-      max-width: 768px;
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    .site-header {
+      background-color: #ffd5a2;
       height: 80px;
+      width: 100%;
+    }
+    .site-title {
+      margin-left: 3% !important;
+      font-size: 30px !important;
+    }
+    .main-navigation .menuNav {
       display: flex;
-      align-items: center;
+      height: 100%;
+    }
+    .menuSection {
+      margin-top: 0% !important;
+      height: 45% !important;
     }
     .menuToggle {
       width: 0%;
-      right: 90%;
+      left: -6%;
     }
-  }
-  @media (max-width: 1024px) {
-    .main-navigation {
-      max-width: 1024px;
-      height: 80px;
+    .linkNav {
+      font-size: 40px;
     }
-  }
-  @media (max-width: 1200px) {
-    .main-navigation {
-      max-width: 1200px;
+    .footerNav {
+      margin-top: 30% !important;
+      left: 41% !important;
     }
-  }
-  @media (max-width: 1500px) {
-    .main-navigation {
-      max-width: 1500px;
+    .orchid {
+      left: 10% !important;
     }
-  }
-  @media (max-width: 1440px){
-    .blue, .black, .orange, .orchid, .Sunflower, .flower, .random, .Hibiscus, .logoNav, .footerNav, .menuToggle::before {
-        display: none;
+    .orchid,
+    .sunflower,
+    .flower,
+    .random,
+    .hibiscus,
+    .blue,
+    .black,
+    .orange {
+      max-width: 100px;
     }
   }
