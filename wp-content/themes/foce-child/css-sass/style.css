@@ -41,7 +41,7 @@
 .oscars .txt-oscars::after {
   content: url("../assets/images/orchid.png");
   position: absolute;
-  right: -90%;
+  right: -80%;
   bottom: 100%;
   max-width: 100%;
 }
@@ -694,7 +694,7 @@ h3 {
   .site-title {
     margin-top: 3% !important;
     margin-left: 6% !important;
-    font-size: 20px !important;
+    font-size: 15px !important;
   }
   .main-navigation .menuNav {
     display: flex;
